@@ -8,9 +8,9 @@ better you'll get.
 
 ## Prerequisites
 
-* Fundamental JavaScript: syntax, data types, and arrays
-* Conditions, including `if`, `if`/`else`, and `if`/`else if`/`else`
-* Loops, both `for` loops and `while` loops
+- Fundamental JavaScript: syntax, data types, and arrays
+- Conditions, including `if`, `if`/`else`, and `if`/`else if`/`else`
+- Loops, both `for` loops and `while` loops
 
 ## Instructions
 
@@ -23,7 +23,7 @@ required to turn in your submission by making a pull request on the original
 repository.
 
 Unless otherwise specified on the calendar, homework is due the next morning by
-9:00am.
+10:00am.
 
 **Make a commit after each prompt.**
 
