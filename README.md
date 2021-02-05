@@ -39,6 +39,12 @@ in class. This is intended to help you learn to become a more independent develo
 
 ### Reminder: You are required to make a commit after each prompt.
 
+> **Optional:** If you're curious about whether your code passes the tests written for this assignment, you can do the following:
+
+1. From inside this directory, run `npm install` in your terminal. This will download the testing dependencies (mocha and chai).
+1. Run `npm test` in the directory. Read the output to checkout which tests your code is passing and failing.
+1. If there are any errors, try fixing them and running the code again.
+
 ## [License](LICENSE)
 
 1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
