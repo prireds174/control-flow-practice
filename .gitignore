@@ -1,4 +1,4 @@
-
+node_modules
 # Created by https://www.gitignore.io/api/macos,linux
 
 ### macOS ###
@@ -7,7 +7,7 @@
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
 # Thumbnails
 ._*
 # Files that might appear in the root of a volume
