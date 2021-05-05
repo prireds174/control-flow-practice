@@ -57,22 +57,12 @@ describe("prompt2", function () {
     prompt2();
   });
 
-  it("should console.log more than once", function () {
-    expect(console.log.calledOnce).to.be.false;
-  });
-
   it("should log even numbers", function () {
+    expect(console.log.calledWith(1)).to.be.false;
     expect(console.log.calledWith(2)).to.be.true;
     expect(console.log.calledWith(50)).to.be.true;
+    expect(console.log.calledWith(51)).to.be.false;
     expect(console.log.calledWith(98)).to.be.true;
-  });
-  it("should not log odd numbers", function () {
-    expect(console.log.calledWith(1)).to.be.false;
-    expect(console.log.calledWith(89)).to.be.false;
-  });
-  it("should not log 0 or 100", function () {
-    expect(console.log.calledWith(0)).to.be.false;
-    expect(console.log.calledWith(100)).to.be.false;
   });
 });
 
@@ -82,15 +72,8 @@ describe("prompt3", function () {
     prompt3();
   });
 
-  it("should console.log more than once", function () {
-    expect(console.log.calledOnce).to.be.false;
-  });
-
-  it("should not log -6", function () {
-    expect(console.log.calledWith(-6)).to.be.false;
-  });
-
   it("should log numbers -5 though 5", function () {
+    expect(console.log.calledWith(-6)).to.be.false;
     expect(console.log.calledWith(-5)).to.be.true;
     expect(console.log.calledWith(-4)).to.be.true;
     expect(console.log.calledWith(-3)).to.be.true;
@@ -102,9 +85,6 @@ describe("prompt3", function () {
     expect(console.log.calledWith(3)).to.be.true;
     expect(console.log.calledWith(4)).to.be.true;
     expect(console.log.calledWith(5)).to.be.true;
-  });
-
-  it("should not log 6", function () {
     expect(console.log.calledWith(6)).to.be.false;
   });
 });
@@ -115,23 +95,13 @@ describe("prompt4", function () {
     prompt4();
   });
 
-  it("should console.log more than once", function () {
-    expect(console.log.calledOnce).to.be.false;
-  });
-
-  it("should not log 11", function () {
-    expect(console.log.calledWith(11)).to.be.false;
-  });
-
   it("should log numbers 10 thorough 0", function () {
+    expect(console.log.calledWith(-1)).to.be.false;
     expect(console.log.calledWith(10)).to.be.true;
     expect(console.log.calledWith(6)).to.be.true;
     expect(console.log.calledWith(5)).to.be.true;
     expect(console.log.calledWith(0)).to.be.true;
-  });
-
-  it("should not log -1", function () {
-    expect(console.log.calledWith(-1)).to.be.false;
+    expect(console.log.calledWith(11)).to.be.false;
   });
 });
 
@@ -141,15 +111,8 @@ describe("prompt5", function () {
     prompt5();
   });
 
-  it("should console.log more than once", function () {
-    expect(console.log.calledOnce).to.be.false;
-  });
-
-  it("should not log 6", function () {
-    expect(console.log.calledWith(6)).to.be.false;
-  });
-
   it("should log numbers 5 thorough -5", function () {
+    expect(console.log.calledWith(-6)).to.be.false;
     expect(console.log.calledWith(-5)).to.be.true;
     expect(console.log.calledWith(-4)).to.be.true;
     expect(console.log.calledWith(-3)).to.be.true;
@@ -161,10 +124,7 @@ describe("prompt5", function () {
     expect(console.log.calledWith(3)).to.be.true;
     expect(console.log.calledWith(4)).to.be.true;
     expect(console.log.calledWith(5)).to.be.true;
-  });
-
-  it("should not log -6", function () {
-    expect(console.log.calledWith(-6)).to.be.false;
+    expect(console.log.calledWith(6)).to.be.false;
   });
 });
 
@@ -174,24 +134,13 @@ describe("prompt6", function () {
     prompt6();
   });
 
-  it("should console.log more than once", function () {
-    expect(console.log.calledOnce).to.be.false;
-  });
-
-  it("should log even numbers", function () {
+  it("should log even numbers 0-50 inclusive", function () {
     expect(console.log.calledWith(0)).to.be.true;
     expect(console.log.calledWith(24)).to.be.true;
     expect(console.log.calledWith(48)).to.be.true;
-  });
-  it("should not log odd numbers", function () {
     expect(console.log.calledWith(1)).to.be.false;
     expect(console.log.calledWith(49)).to.be.false;
-  });
-
-  it("should log 50", function () {
     expect(console.log.calledWith(50)).to.be.true;
-  });
-  it("should not log 51", function () {
     expect(console.log.calledWith(51)).to.be.false;
   });
 });
@@ -202,29 +151,13 @@ describe("prompt7", function () {
     prompt7();
   });
 
-  it("should console.log more than once", function () {
-    expect(console.log.calledOnce).to.be.false;
-  });
-
-  it("should not log 0", function () {
-    // zero is not a multiple of 5
-    expect(console.log.calledWith("I found a 0. High five!")).to.be.false;
-  });
-
   it("should log multiples of 5", function () {
     expect(console.log.calledWith("I found a 5. High five!")).to.be.true;
     expect(console.log.calledWith("I found a 10. High five!")).to.be.true;
     expect(console.log.calledWith("I found a 25. High five!")).to.be.true;
-    expect(console.log.calledWith("I found a 90. High five!")).to.be.true;
-  });
-
-  it("should log 100", function () {
-    // prompt is inclusive of upper limit
-    expect(console.log.calledWith("I found a 100. High five!")).to.be.true;
-  });
-
-  it("should not log a number that's not a multiple of 5", function () {
     expect(console.log.calledWith("I found a 51. High five!")).to.be.false;
+    expect(console.log.calledWith("I found a 90. High five!")).to.be.true;
+    expect(console.log.calledWith("I found a 100. High five!")).to.be.true;
   });
 });
 
@@ -263,71 +196,59 @@ describe("prompt9", function () {
 });
 
 describe("prompt10", function () {
-  beforeEach(function () {
-    this.sinon.stub(console, "log");
-  });
   it("should log an array with the even numbers between 0 and 100 (non-inclusive)", function () {
-    prompt10();
-    expect(
-      console.log.calledWith([
-        2,
-        4,
-        6,
-        8,
-        10,
-        12,
-        14,
-        16,
-        18,
-        20,
-        22,
-        24,
-        26,
-        28,
-        30,
-        32,
-        34,
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        50,
-        52,
-        54,
-        56,
-        58,
-        60,
-        62,
-        64,
-        66,
-        68,
-        70,
-        72,
-        74,
-        76,
-        78,
-        80,
-        82,
-        84,
-        86,
-        88,
-        90,
-        92,
-        94,
-        96,
-        98,
-      ])
-    ).to.be.true;
-  });
-
-  it("should return an array with the even numbers between 0 and 100 (non-inclusive)", function () {
-    const prompt10Result = prompt10();
-    it("should return an array of length 49", function () {
-      expect(prompt10Result).to.be.an("array").ofLength(49);
-    });
+    const array = prompt10();
+    expect(array).to.deep.equal([
+      2,
+      4,
+      6,
+      8,
+      10,
+      12,
+      14,
+      16,
+      18,
+      20,
+      22,
+      24,
+      26,
+      28,
+      30,
+      32,
+      34,
+      36,
+      38,
+      40,
+      42,
+      44,
+      46,
+      48,
+      50,
+      52,
+      54,
+      56,
+      58,
+      60,
+      62,
+      64,
+      66,
+      68,
+      70,
+      72,
+      74,
+      76,
+      78,
+      80,
+      82,
+      84,
+      86,
+      88,
+      90,
+      92,
+      94,
+      96,
+      98,
+    ]);
   });
 });
 
@@ -335,10 +256,6 @@ describe("prompt11", function () {
   beforeEach(function () {
     this.sinon.stub(console, "log");
     prompt11();
-  });
-
-  it("should log only once", function () {
-    expect(console.log.calledOnce).to.be.true;
   });
 
   it("should log the median number of the nums array", function () {
@@ -350,10 +267,6 @@ describe("prompt12", function () {
   beforeEach(function () {
     this.sinon.stub(console, "log");
     prompt12();
-  });
-
-  it("should log more than once", function () {
-    expect(console.log.calledOnce).to.be.false;
   });
 
   it("should log the value of the outer array and the inner array", function () {
@@ -370,10 +283,6 @@ describe("prompt13", function () {
   beforeEach(function () {
     this.sinon.stub(console, "log");
     prompt13();
-  });
-
-  it("should log more than once", function () {
-    expect(console.log.calledOnce).to.be.false;
   });
 
   it("should log the values of the nested arrays", function () {
